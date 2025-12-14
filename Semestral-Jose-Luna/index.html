@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéFinder</title>
+    <link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+    <main id="page-search">
+
+        <div class="title-banner">⚡POKÉMON FINDER</div>
+
+        <div class="nav-buttons">
+            <a href="index.html" class="poke-btn active">🔍 BUSCAR</a>
+            
+            <a href="historico.html" class="poke-btn">📜 HISTÓRICO</a>
+            <a href="vs.html" class="poke-btn">⚔️ VS</a>
+            <a href="favoritos.html" class="poke-btn">❤️ FAVORITOS</a>
+            <button id="theme-toggle" class="poke-btn btn-theme">🌙</button>
+        </div>
+
+        <div class="search-container-styled">
+            <div class="search-row">
+                
+                <select id="searchType" class="search-select">
+                    <option value="pokemon">👾 POKÉMON</option>
+                    <option value="ability">✨ HABILIDAD</option>
+                </select>
+
+                <div class="input-wrapper">
+                    <input type="text" id="searchInput" class="search-input" placeholder="NOMBRE O ID..." autocomplete="off">
+                    
+                    <div id="autocomplete-list" class="autocomplete-box hidden"></div>
+                </div>
+
+                <button id="btnSearch" class="search-btn">BUSCAR</button>
+            </div>
+
+            <div id="loading" class="loading-text hidden">
+                ⌛ ACCEDIENDO A LA POKÉDEX...
+            </div>
+        </div>
+        
+        <div id="resultContainer"></div>
+
+    </main>
+
+    <script src="shared.js"></script>
+</body>
+</html>
